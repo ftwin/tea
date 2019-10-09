@@ -148,12 +148,12 @@ $(function(){
     
     //set up filter based on Question 1
 
-        $('input[name="caffeine"]').change(
-            function(){
-            console.log('change')
-        // });
-    // $('#formQ1').on('submit', function(event) {
-        // event.preventDefault();
+        // $('input[name="caffeine"]').change(
+        //     function(){
+        //     console.log('change')
+        // // });
+        $('#formQ1').on('submit', function(event) {
+            event.preventDefault();
 
         //smooth scroll to next section
         $('html, body').animate({
