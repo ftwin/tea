@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>What Tea Should I Drink Today?</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Question1" id="Question1">
+        <h1>What kind of tea should I drink today?</h1>
+        <form action="" id="formQ1">
+            <h2>I want to feel:</h2>
+            <input type="radio" name="caffeine" id="energized" value="energized"><label for="energized">Energized</label>
+            <input type="radio" name="caffeine" id="relaxed" value="relaxed"><label for="relaxed">Relaxed</label>
+            <input type="submit" name="submit1" value="Next">
+        </form>
+    </div>
+    <div class="Question2" id="Question2">
+        <form action="" id="formQ2">
+            <h2>I'd like a:</h2>
+            <input type="radio" name="strength" id="bold" value="bold"><label for="bold">Bold flavour</label>
+            <input type="radio" name="strength" id="mild" value="mild"><label for="mild">Mild Flavour</label>
+            <input type="submit" name="submit2" value="Next">
+        </form>
+    </div>
+    <div class="Question3" id="Question3">
+        <form action="" id="formQ3">
+            <h2>Choose a flavour profile:</h2>
+            <input type="radio" name="flavour" id="classic" value="classic"><label for="classic">Classic</label>
+            <input type="radio" name="flavour" id="floral" value="floral"><label for="floral">Floral</label>
+            <input type="radio" name="flavour" id="herbal" value="herbal"><label for="herbal">Herbal</label>
+            <input type="radio" name="flavour" id="earthy" value="earthy"><label for="earthy">Earthy</label>
+            <input type="submit" name="submit2" value="Next">
+        </form>
+    </div>
+    <div class="result" id = "result">
+        <h3></h3>
+        <a href="#" id="reset">Start Over</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="teaScript.js"></script>
+
+</body>
+</html>
