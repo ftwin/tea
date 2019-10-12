@@ -113,6 +113,7 @@ input[type="submit"]:focus {
 .result {
     
     display: flex;
+    max-width: 90%;
     height: 100vh;
     margin: 0 auto;
     align-items: center;
