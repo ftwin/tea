@@ -124,6 +124,7 @@ input[type="submit"]:focus {
 .Question1 {
     background-color: rgb(165, 186, 196); 
     flex-direction: column;
+    flex-wrap: nowrap;
 }
 .Question2 {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('phuong-nguyen-DgW9B48pRb4-unsplash.jpg');
