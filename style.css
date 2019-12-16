@@ -33,29 +33,39 @@ h1 {
     font-size: 6rem;
     max-width: 80%;
     color: rgb(27, 14, 10);
+    margin: 0;
 }
 h2 {    
     font-size: 4rem;
-    padding-bottom: 20px;
 }
+
 h3 {
     font-family: 'Lato', sans-serif;
     font-size: 6rem;
     max-width: 80%;
     color: rgb(233, 233, 233);
-    width: 100%;
 }
+
 form {
-    min-width: 50%;
+    min-width: 70%;
 }
 
 label {
-	border: 1px solid rgba(253,234,223,0.15);
-    /* display: block; */
-    width: 100%;
-	padding:30px 80px;
+	border: 2px solid rgba(253,234,223,0.15);
+	padding:30px 50px;
 	cursor: pointer;
     transition: all .5s ease-in-out;
+    margin: 2px;
+    flex: 1 0 calc(50% - 4px);
+    white-space: nowrap;
+}
+
+.question3 label {
+    flex: 1 0 25%;
+}
+
+.question3 form {
+    width: 80%;
 }
 
 label:hover,
@@ -68,8 +78,8 @@ input[type="radio"] {
 	opacity: 0;
 	width: 0;
     height: 0;
-    position:absolute; */
-    left: -100px; */
+    position:absolute;
+    left: -100px;
 }
 
 input[type="radio"]:active + label {
@@ -102,41 +112,50 @@ input[type="submit"]:active,
 input[type="submit"]:focus {
     border: 2px solid rgb(255, 255, 255);
 	display: block;
-	padding:30px;
 	cursor: pointer;
-    width: 100%;
 }
 
-.Question1,
-.Question2,
-.Question3,
-.result {
-    
+.wrapper {    
     display: flex;
-    height: 100vh;
     margin: 0 auto;
     align-items: center;
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
+    width: 80%;
+    max-width: 1400px;
 }
-.Question1 {
-    background-color: rgb(165, 186, 196); 
+
+.question1,
+.question2,
+.question3,
+.wrapper {
+    min-height: 100vh;
+}
+
+.question1 {
+    background-color: rgb(165, 186, 196);
+}
+
+.question1 .wrapper,
+.result .wrapper {
     flex-direction: column;
 }
-.Question2 {
+
+.question2 {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('phuong-nguyen-DgW9B48pRb4-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;    
+    background-attachment: fixed; 
+    background-position: center;   
 }
 
-.Question2 label,
-.Question2 input[type="submit"]{
+.question2 label,
+.question2 input[type="submit"]{
     background-color: rgba(240, 231, 232, 0.5);
 }
 
-.Question3 {
+.question3 {
     background-color: rgb(247,191,197);
     background-color: rgb(218,129,100);
 }
@@ -148,4 +167,60 @@ input[type="submit"]:focus {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1150px) {
+    .wrap {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 900px) {
+    h1 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        width: 100%;
+        font-size: 4rem;
+    }
+
+    label {
+        padding: 20px 50px;
+    }
+
+    input[type="submit"] {
+        padding: 20px 30px;
+    }
 }

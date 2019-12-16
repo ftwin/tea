@@ -216,6 +216,9 @@ $(function(){
         },800)
 
         //check if energized or relaxed is selected
+
+        //.querySelector replaces getElementByID//
+        
         if (document.getElementById('classic').checked){
             console.log('classic')
             flavourFiltered = strengthFiltered.filter(function(tea) {
