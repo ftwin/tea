@@ -130,15 +130,13 @@ $(function(){
         }
     ];
 
-    console.log(teas);
-
 
     //Display the random tea from filtered tea list in the h3 tag
 
     function results() {
 
         const randomTea = Math.floor(Math.random() * flavourFiltered.length)
-        console.log(randomTea);
+
 
         if (flavourFiltered.length === 0){
             document.querySelector('h3').textContent = "No teas to suggest, please try again.";
@@ -148,10 +146,6 @@ $(function(){
     
     //set up filter based on Question 1
 
-        // $('input[name="caffeine"]').change(
-        //     function(){
-        //     console.log('change')
-        // // });
         $('#formQ1').on('submit', function(event) {
             event.preventDefault();
 
@@ -162,19 +156,18 @@ $(function(){
     
         //check if energized or relaxed is selected
         if (document.getElementById('energized').checked){
-            console.log('energized')
+
             caffeineFiltered = teas.filter(function(tea) {
                 return tea.caffeine === "Yes";
             })          
         }        
         else if (document.getElementById('relaxed').checked){
-            console.log('relaxed')
+
             caffeineFiltered = teas.filter(function(tea) {
                 return tea.caffeine === "No";
             })  
         };
-
-        console.log(caffeineFiltered);      
+      
     });
 
     //set up next filter based on Question 2
@@ -189,20 +182,16 @@ $(function(){
 
         //check if energized or relaxed is selected
         if (document.getElementById('bold').checked){
-            console.log('bold')
             strengthFiltered = caffeineFiltered.filter(function(tea) {
                 return tea.Strength === "Strong";
             })          
         }        
         else if (document.getElementById('mild').checked){
-            console.log('mild')
             strengthFiltered = caffeineFiltered.filter(function(tea) {
                 return tea.Strength === "Mild";
             })  
         };
 
-        console.log(strengthFiltered);
-         
     });
 
     //set up final filter based on Question 3
@@ -220,31 +209,26 @@ $(function(){
         //.querySelector replaces getElementByID//
         
         if (document.getElementById('classic').checked){
-            console.log('classic')
             flavourFiltered = strengthFiltered.filter(function(tea) {
                 return tea.flavourProfile === "Classic";
             })          
         }        
         else if (document.getElementById('floral').checked){
-            console.log('floral')
             flavourFiltered = strengthFiltered.filter(function(tea) {
                 return tea.flavourProfile === "Floral";
             })  
         }
         else if (document.getElementById('herbal').checked){
-            console.log('herbal')
             flavourFiltered = strengthFiltered.filter(function(tea) {
                 return tea.flavourProfile === "Herbal";
             })  
         }
         else if (document.getElementById('earthy').checked){
-            console.log('earthy')
             flavourFiltered = strengthFiltered.filter(function(tea) {
                 return tea.flavourProfile === "Earthy";
             })  
         }
 
-        console.log(flavourFiltered);
         results();
          
     });
