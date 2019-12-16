@@ -233,8 +233,6 @@ $(function(){
          
     });
 
-    
-
      //start over button smooth scroll to top
      $('#reset').click(function() {
         $('html, body').animate({
