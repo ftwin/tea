@@ -13,7 +13,8 @@ html {
 body {
     font-family: 'Lato', sans-serif;
     font-size: 2rem;
-    color: rgb(27,14,10); 
+    color: rgb(27,14,10);
+    max-width: 500px;
 }
 
 a {
@@ -140,6 +141,7 @@ input[type="submit"]:focus {
 .question1 .wrapper,
 .result .wrapper {
     flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .question2 {
